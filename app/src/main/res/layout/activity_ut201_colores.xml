@@ -8,6 +8,30 @@
     tools:context=".ut01.ut201_Colores">
 
     <TextView
+        android:id="@+id/ut201B"
+        android:layout_width="20dp"
+        android:layout_height="31dp"
+        android:text="B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.161"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.427" />
+
+    <TextView
+        android:id="@+id/ut201G"
+        android:layout_width="20dp"
+        android:layout_height="29dp"
+        android:text="G"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.161"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.327" />
+
+    <TextView
         android:id="@+id/ut201txtColores"
         android:layout_width="224dp"
         android:layout_height="55dp"
@@ -21,6 +45,18 @@
         app:layout_constraintVertical_bias="0.585" />
 
     <SeekBar
+        android:id="@+id/ut201skbrB"
+        android:layout_width="241dp"
+        android:layout_height="37dp"
+        android:max="255"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.67"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.422" />
+
+    <SeekBar
         android:id="@+id/ut201seekbrR"
         android:layout_width="241dp"
         android:layout_height="37dp"
@@ -28,20 +64,10 @@
         android:progress="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.67"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.231" />
-
-    <SeekBar
-        android:id="@+id/ut201skbrB"
-        android:layout_width="241dp"
-        android:layout_height="37dp"
-        android:max="255"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.425" />
+        app:layout_constraintVertical_bias="0.227" />
 
     <SeekBar
         android:id="@+id/ut201skbrG"
@@ -50,9 +76,10 @@
         android:max="255"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.67"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.334" />
+        app:layout_constraintVertical_bias="0.331" />
 
     <Switch
         android:id="@+id/ut201swtchColor"
@@ -89,5 +116,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.086" />
+
+    <TextView
+        android:id="@+id/ut201R"
+        android:layout_width="8dp"
+        android:layout_height="40dp"
+        android:text="R"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.156"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.228" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

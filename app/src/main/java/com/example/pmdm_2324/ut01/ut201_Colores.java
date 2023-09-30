@@ -21,6 +21,7 @@ public class ut201_Colores extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ut201_colores);
         TextView textoColores;
+        TextView entradaTexto;
         Button Aceptar;
         SeekBar barraR;
         SeekBar barraG;
@@ -34,6 +35,7 @@ public class ut201_Colores extends AppCompatActivity {
         barraG=findViewById(R.id.ut201skbrG);
         barraB=findViewById(R.id.ut201skbrB);
         ConstraintLayout fondo=findViewById(R.id.ut201Layout);
+        entradaTexto=findViewById(R.id.ut201plntx);
 
         switchCambioColor=findViewById(R.id.ut201swtchColor);
         planeText=findViewById(R.id.ut201plntx);
@@ -45,6 +47,7 @@ public class ut201_Colores extends AppCompatActivity {
             int colorFondo= Color.rgb(ProgresoR, ProgresoG, ProgresoB);
             fondo.setBackgroundColor(colorFondo);
             textoColores.setText(planeText.getText());
+
         });
         switchCambioColor.setOnClickListener((View x)->{
             if(switchCambioColor.isChecked()){
