@@ -61,6 +61,7 @@ View.OnClickListener manejador,manejadorBorrarSolo1,manejadorBorrarTodo;
             int divisionPorcentaje=100;
             if(radioMal.isChecked()){
                 tvSalidaNumeros.setText(tvSalidaNumeros.getText());
+                tvPropina.setText("");
             }else if(radioBien.isChecked()){
                 int porcentajeBien=10;
                 int numero=Integer.parseInt(tvSalidaNumeros.getText().toString());
