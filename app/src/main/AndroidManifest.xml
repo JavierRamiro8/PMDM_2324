@@ -13,7 +13,7 @@
         android:theme="@style/Theme.PMDM_2324"
         tools:targetApi="31">
         <activity
-            android:name=".ut01.PROPINATRON2000"
+            android:name=".ut01.Propinatron2000"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
