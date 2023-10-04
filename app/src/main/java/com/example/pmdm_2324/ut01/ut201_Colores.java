@@ -22,14 +22,14 @@ public class ut201_Colores extends AppCompatActivity {
         setContentView(R.layout.activity_ut201_colores);
         TextView textoColores;
         TextView entradaTexto;
-        Button Aceptar;
+        Button btAceptar;
         SeekBar barraR;
         SeekBar barraG;
         SeekBar barraB;
         Switch switchCambioColor;
-        TextView planeText;
+        TextView ut201plIntroducirTexto;
 
-        Aceptar=findViewById(R.id.ut201BotonAceptar);
+        btAceptar=findViewById(R.id.ut201BotonAceptar);
         textoColores=findViewById(R.id.ut201txtColores);
         barraR=findViewById(R.id.ut201seekbrR);
         barraG=findViewById(R.id.ut201skbrG);
@@ -38,15 +38,15 @@ public class ut201_Colores extends AppCompatActivity {
         entradaTexto=findViewById(R.id.ut201plntx);
 
         switchCambioColor=findViewById(R.id.ut201swtchColor);
-        planeText=findViewById(R.id.ut201plntx);
+        ut201plIntroducirTexto=findViewById(R.id.ut201plntx);
 
-        Aceptar.setOnClickListener((View v)->{
+        btAceptar.setOnClickListener((View v)->{
             int ProgresoR=barraR.getProgress();
             int ProgresoG=barraG.getProgress();
             int ProgresoB=barraB.getProgress();
             int colorFondo= Color.rgb(ProgresoR, ProgresoG, ProgresoB);
             fondo.setBackgroundColor(colorFondo);
-            textoColores.setText(planeText.getText());
+            textoColores.setText(ut201plIntroducirTexto.getText());
 
         });
         switchCambioColor.setOnClickListener((View x)->{

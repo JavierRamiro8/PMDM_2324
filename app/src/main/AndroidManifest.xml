@@ -13,6 +13,15 @@
         android:theme="@style/Theme.PMDM_2324"
         tools:targetApi="31">
         <activity
+            android:name=".ut01.PROPINATRON2000"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".ut01.ut201_Colores"
             android:exported="true">
             <intent-filter>
@@ -23,15 +32,6 @@
         </activity>
         <activity
             android:name=".ut01.ut2_ej01_CajaRadioCheckTextoBoton"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".ut01.ActividadSaluda"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
