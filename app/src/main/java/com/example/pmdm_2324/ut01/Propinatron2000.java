@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import com.example.pmdm_2324.R;
@@ -12,9 +13,11 @@ import com.example.pmdm_2324.R;
 import java.util.function.Consumer;
 
 public class Propinatron2000 extends AppCompatActivity {
-Button boton1,boton2,boton3,boton4,boton5,boton6,boton7,boton8,boton9,boton0,botonDel,botonC;
-TextView tvSalidaNumeros;
-View.OnClickListener manejador;
+Button boton1,boton2,boton3,boton4,boton5,boton6,boton7,boton8,boton9,boton0,botonDel,botonC,botonAceptar;
+TextView tvSalidaNumeros,tvPropina;
+RadioButton radioMal,radioBien,radioExcelente;
+View.OnClickListener manejador,manejadorBorrarSolo1,manejadorBorrarTodo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,11 +34,45 @@ View.OnClickListener manejador;
         boton0=findViewById(R.id.ut203bt0);
         botonDel=findViewById(R.id.ut203btDel);
         botonC=findViewById(R.id.ut203btC);
+        botonAceptar=findViewById(R.id.ut203btAceptar);
         tvSalidaNumeros=findViewById(R.id.ut203tvResultado);
+        radioMal=findViewById(R.id.ut203rdMal);
+        radioBien=findViewById(R.id.ut203rdBien);
+        radioExcelente=findViewById(R.id.ut203rdExcelente);
+        tvPropina=findViewById(R.id.ut203tvPropina);
         manejador = (View botonPulsado) -> {
             Button seleccion = (Button) botonPulsado;
             tvSalidaNumeros.append(seleccion.getText());
         };
+        manejadorBorrarSolo1=(View borrarSolo1)->{
+            int resto=1;
+            Button seleccionado = (Button) borrarSolo1;
+            String cadenaTv= tvSalidaNumeros.getText().toString();
+            cadenaTv=cadenaTv.substring(0,cadenaTv.length()-resto);
+            tvSalidaNumeros.setText(cadenaTv);
+        };
+        manejadorBorrarTodo=(View borrar)->{
+            Button seleccionado = (Button) borrar;
+            tvSalidaNumeros.setText("");
+            tvPropina.setText("");
+        };
+        botonAceptar.setOnClickListener((View v)->{
+            int resultado;
+            int divisionPorcentaje=100;
+            if(radioMal.isChecked()){
+                tvSalidaNumeros.setText(tvSalidaNumeros.getText());
+            }else if(radioBien.isChecked()){
+                int porcentajeBien=10;
+                int numero=Integer.parseInt(tvSalidaNumeros.getText().toString());
+                 resultado=(numero*porcentajeBien)/divisionPorcentaje;
+                tvPropina.setText(String.valueOf(resultado));
+            }else{
+                int porcentajeExcelente=20;
+                int numero=Integer.parseInt(tvSalidaNumeros.getText().toString());
+                resultado=(numero*porcentajeExcelente)/divisionPorcentaje;
+                tvPropina.setText(String.valueOf(resultado));
+            }
+        });
         boton1.setOnClickListener(manejador);
         boton2.setOnClickListener(manejador);
         boton3.setOnClickListener(manejador);
@@ -46,8 +83,8 @@ View.OnClickListener manejador;
         boton8.setOnClickListener(manejador);
         boton9.setOnClickListener(manejador);
         boton0.setOnClickListener(manejador);
-        botonDel.setOnClickListener(manejador);
-        botonC.setOnClickListener(manejador);
+        botonDel.setOnClickListener(manejadorBorrarSolo1);
+        botonC.setOnClickListener(manejadorBorrarTodo);
 
     }
 }
