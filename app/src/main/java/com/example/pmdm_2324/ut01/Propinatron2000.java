@@ -57,21 +57,21 @@ View.OnClickListener manejador,manejadorBorrarSolo1,manejadorBorrarTodo;
             tvPropina.setText("");
         };
         botonAceptar.setOnClickListener((View v)->{
-            int resultado;
+            double resultado;
             int divisionPorcentaje=100;
             if(radioMal.isChecked()){
                 tvSalidaNumeros.setText(tvSalidaNumeros.getText());
                 tvPropina.setText("");
             }else if(radioBien.isChecked()){
-                int porcentajeBien=10;
-                int numero=Integer.parseInt(tvSalidaNumeros.getText().toString());
-                 resultado=(numero*porcentajeBien)/divisionPorcentaje;
-                tvPropina.setText(String.valueOf(resultado));
+                double porcentajeBien=10;
+                double numero=Integer.parseInt(tvSalidaNumeros.getText().toString());
+                 resultado=(numero*porcentajeBien)/divisionPorcentaje+numero;
+                tvPropina.setText(String.valueOf(resultado)+"€ de propina");
             }else{
-                int porcentajeExcelente=20;
-                int numero=Integer.parseInt(tvSalidaNumeros.getText().toString());
-                resultado=(numero*porcentajeExcelente)/divisionPorcentaje;
-                tvPropina.setText(String.valueOf(resultado));
+                double porcentajeExcelente=20;
+                double numero=Integer.parseInt(tvSalidaNumeros.getText().toString());
+                resultado=(numero*porcentajeExcelente)/divisionPorcentaje+numero;
+                tvPropina.setText(String.valueOf(resultado)+"€ de propina");
             }
         });
         boton1.setOnClickListener(manejador);
