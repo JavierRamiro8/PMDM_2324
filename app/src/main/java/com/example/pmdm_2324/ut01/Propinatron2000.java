@@ -40,6 +40,7 @@ View.OnClickListener manejador,manejadorBorrarSolo1,manejadorBorrarTodo;
         radioBien=findViewById(R.id.ut203rdBien);
         radioExcelente=findViewById(R.id.ut203rdExcelente);
         tvPropina=findViewById(R.id.ut203tvPropina);
+
         manejador = (View botonPulsado) -> {
             Button seleccion = (Button) botonPulsado;
             tvSalidaNumeros.append(seleccion.getText());
