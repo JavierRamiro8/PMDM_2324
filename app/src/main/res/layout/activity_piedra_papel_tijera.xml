@@ -10,50 +10,13 @@
         android:id="@+id/ut207LbResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="132dp"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ut207btnnTijeras" />
-
-    <Button
-        android:id="@+id/ut207btnnReiniciar"
-        android:layout_width="166dp"
-        android:layout_height="88dp"
-        android:text="Reiniciar"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.885"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.934" />
-
-    <Button
-        android:id="@+id/ut207btnnPapel"
-        android:layout_width="166dp"
-        android:layout_height="88dp"
-        android:text="Papel"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.934"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.269" />
-
-    <Button
-        android:id="@+id/ut207btnnTijeras"
-        android:layout_width="166dp"
-        android:layout_height="88dp"
-        android:text="Tijeras"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.479" />
+        app:layout_constraintVertical_bias="0.854" />
 
     <TextView
         android:id="@+id/ut207LbMaquina"
@@ -99,28 +62,65 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ut207LbJugador1" />
 
-    <Button
-        android:id="@+id/ut207btnnPiedra"
-        android:layout_width="166dp"
-        android:layout_height="88dp"
-        android:text="Piedra"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.065"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.269" />
-
     <TextView
         android:id="@+id/ut207LbResultadoMaquina"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
         android:text="Resultado de la maquina: "
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintHorizontal_bias="0.566"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ut207btnnTijeras" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.795" />
+
+    <Button
+        android:id="@+id/ut207btnnReiniciar"
+        android:layout_width="166dp"
+        android:layout_height="88dp"
+        android:text="Reiniciar"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/ut207btnnPapel"
+        android:layout_width="138dp"
+        android:layout_height="184dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.177"
+        app:srcCompat="@drawable/papel" />
+
+    <ImageButton
+        android:id="@+id/ut207btnnPiedra"
+        android:layout_width="190dp"
+        android:layout_height="181dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ut207btnnPapel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.182"
+        app:srcCompat="@drawable/piedra" />
+
+    <ImageButton
+        android:id="@+id/ut207btnnTijeras"
+        android:layout_width="196dp"
+        android:layout_height="227dp"
+        app:layout_constraintBottom_toTopOf="@+id/ut207LbResultadoMaquina"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ut207btnnPiedra"
+        app:layout_constraintVertical_bias="0.175"
+        app:srcCompat="@drawable/tijeras" />
 </androidx.constraintlayout.widget.ConstraintLayout>
