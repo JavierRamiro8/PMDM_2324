@@ -17,8 +17,8 @@ TextView resultadoCalculadora;
         resultadoCalculadora = findViewById(R.id.u302tvSalidaCalculadora);
         setContentView(R.layout.activity_ut302_calculadora_resultado);
         resultadoCalculadora=findViewById(R.id.u302tvSalidaCalculadora);
-       int resultado=getIntent().getIntExtra("RESULTADO",0);
-       String cadena=Integer.toString(resultado);
+       double resultado=getIntent().getDoubleExtra("RESULTADO",0);
+       String cadena= String.valueOf(Double.valueOf(resultado));
        resultadoCalculadora.setText(cadena);
     }
 }
