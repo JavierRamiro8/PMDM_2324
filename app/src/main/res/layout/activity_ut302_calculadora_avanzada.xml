@@ -6,4 +6,77 @@
     android:layout_height="match_parent"
     tools:context=".ut03.ut302CalculadoraAvanzada">
 
+    <RadioGroup
+        android:layout_width="337dp"
+        android:layout_height="209dp"
+        app:layout_constraintBottom_toTopOf="@+id/u302etSegundoNumero"
+        app:layout_constraintEnd_toEndOf="@+id/u302etPrimerNumero"
+        app:layout_constraintStart_toStartOf="@+id/u302etPrimerNumero"
+        app:layout_constraintTop_toBottomOf="@+id/u302etPrimerNumero"
+        app:layout_constraintVertical_bias="0.597">
+
+        <RadioButton
+            android:id="@+id/u302rdSumar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="sumar" />
+
+        <RadioButton
+            android:id="@+id/u302rdRestar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="restar" />
+
+        <RadioButton
+            android:id="@+id/u302rdMultiplicar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Multiplicar" />
+
+        <RadioButton
+            android:id="@+id/u302rdDividir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dividir" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/u302etSegundoNumero"
+        android:layout_width="221dp"
+        android:layout_height="84dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u302etPrimerNumero"
+        app:layout_constraintVertical_bias="0.56" />
+
+    <EditText
+        android:id="@+id/u302etPrimerNumero"
+        android:layout_width="242dp"
+        android:layout_height="65dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.081" />
+
+    <Button
+        android:id="@+id/u302btCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:text="Calcular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/u302etSegundoNumero"
+        app:layout_constraintStart_toStartOf="@+id/u302etSegundoNumero"
+        app:layout_constraintTop_toBottomOf="@+id/u302etSegundoNumero"
+        app:layout_constraintVertical_bias="0.0" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
