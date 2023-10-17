@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ut01.ut2_ej01_CajaRadioCheckTextoBoton">
+    tools:context=".ut01y02.ut2_ej01_CajaRadioCheckTextoBoton">
 
     <SeekBar
         android:id="@+id/ut201skbrR"

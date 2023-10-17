@@ -13,7 +13,10 @@
         android:theme="@style/Theme.PMDM_2324"
         tools:targetApi="31">
         <activity
-            android:name=".ut01.PiedraPapelTijera"
+            android:name=".ut03.ut302CalculadoraResultado"
+            android:exported="false" />
+        <activity
+            android:name=".ut03.u3MainaplicacionQueLanza"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +25,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ut01.ut02_ej05_pedirCita"
+            android:name=".ut03.u3AplicacionLanzada"
+            android:exported="false" />
+        <activity
+            android:name=".ut01y02.PiedraPapelTijera"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,7 +37,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ut01.u204Sicarios"
+            android:name=".ut01y02.ut02_ej05_pedirCita"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,7 +46,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ut01.Propinatron2000"
+            android:name=".ut01y02.Propinatron2000"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -49,7 +55,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ut01.ut201_Colores"
+            android:name=".ut01y02.ut201_Colores"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -58,7 +64,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ut01.ut2_ej01_CajaRadioCheckTextoBoton"
+            android:name=".ut01y02.ut2_ej01_CajaRadioCheckTextoBoton"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
