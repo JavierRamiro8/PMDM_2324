@@ -8,6 +8,7 @@
     tools:context=".ut03.ut302CalculadoraAvanzada">
 
     <RadioGroup
+        android:id="@+id/u302rgOperacion"
         android:layout_width="340dp"
         android:layout_height="192dp"
         app:layout_constraintBottom_toTopOf="@+id/u302etSegundoNumero"
@@ -32,13 +33,13 @@
             android:id="@+id/u302rdMultiplicar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Multiplicar" />
+            android:text="multiplicar" />
 
         <RadioButton
             android:id="@+id/u302rdDividir"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Dividir" />
+            android:text="dividir" />
 
     </RadioGroup>
 
@@ -78,6 +79,17 @@
         app:layout_constraintStart_toStartOf="@+id/u302etSegundoNumero"
         app:layout_constraintTop_toBottomOf="@+id/u302etSegundoNumero"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/u302tvErrorRadioNoSeleccionado"
+        android:layout_width="168dp"
+        android:layout_height="86dp"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/u302btCalcular"
+        app:layout_constraintEnd_toEndOf="@+id/u302etSegundoNumero"
+        app:layout_constraintStart_toStartOf="@+id/u302etSegundoNumero"
+        app:layout_constraintTop_toBottomOf="@+id/u302etSegundoNumero" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
