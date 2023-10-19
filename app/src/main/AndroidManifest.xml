@@ -13,14 +13,25 @@
         android:theme="@style/Theme.PMDM_2324"
         tools:targetApi="31">
         <activity
-            android:name=".ut03.ut302CalculadoraResultado"
-            android:screenOrientation="sensor"
+            android:name=".ut03.u303ResultadoHeladeria"
             android:exported="false" />
         <activity
-            android:name=".ut03.ut302CalculadoraAvanzada"
-            android:screenOrientation="sensor"
+            android:name=".ut03.u303Heladeria"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ut03.ut302CalculadoraResultado"
+            android:exported="false"
+            android:screenOrientation="sensor" />
+        <activity
+            android:name=".ut03.ut302CalculadoraAvanzada"
+            android:exported="true"
+            android:screenOrientation="sensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
