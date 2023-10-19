@@ -2,7 +2,7 @@
 <resources>
     <string-array name="spinner_data">
         <item>Cucurucho</item>
-        <item>Cucurucho de chocolate</item>
+        <item>Cucurucho_de_chocolate</item>
         <item>Tarrina</item>
     </string-array>
 </resources>

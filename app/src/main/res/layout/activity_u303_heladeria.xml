@@ -43,7 +43,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/u303tvFresa"
         app:layout_constraintTop_toBottomOf="@+id/u303tvFresa"
-        app:layout_constraintVertical_bias="0.05" />
+        app:layout_constraintVertical_bias="0.008" />
 
     <TextView
         android:id="@+id/u303tvFresa"
@@ -89,13 +89,11 @@
         android:id="@+id/u303TiposHelados"
         android:layout_width="188dp"
         android:layout_height="40dp"
+        android:layout_marginTop="468dp"
         android:entries="@array/spinner_data"
-        app:layout_constraintBottom_toTopOf="@+id/u303btAceptar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.41"
         app:layout_constraintStart_toEndOf="@+id/u303tvTipo"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.893" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/u303btAceptar"
@@ -107,7 +105,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.89" />
+        app:layout_constraintVertical_bias="0.975" />
 
     <EditText
         android:id="@+id/ut303numVainilla"
@@ -120,4 +118,13 @@
         app:layout_constraintStart_toEndOf="@+id/u303tvVainilla"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.436" />
+
+    <TextView
+        android:id="@+id/u303tvErrores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/u303btAceptar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u303TiposHelados" />
 </androidx.constraintlayout.widget.ConstraintLayout>
