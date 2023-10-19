@@ -68,9 +68,9 @@ public class ut302CalculadoraAvanzada extends AppCompatActivity {
                     radioNoSeleccionado.setText("");
                 }
                 if (camposVacios) {
-                    return;
+                    radioNoSeleccionado.setText("Compprueba los numeros que estan vacios");
                 }else if(dividir.isChecked() && segundoNumero.getText().toString().equals("0")){
-                        radioNoSeleccionado.setText("No se puede hacer la division con cualquien numero entre 0");
+                    radioNoSeleccionado.setText("No se puede hacer la division con cualquien numero entre 0");
                 }else{
                     i.putExtra(PRIMERNUMERO, primerNumero.getText().toString());
                     i.putExtra(SEGUNDONUMERO, segundoNumero.getText().toString());
