@@ -1,6 +1,12 @@
 package com.example.pmdm_2324.ut03;
 
+import static com.example.pmdm_2324.ut03.ut302CalculadoraAvanzada.OPERACION;
+import static com.example.pmdm_2324.ut03.ut302CalculadoraAvanzada.PRIMERNUMERO;
+import static com.example.pmdm_2324.ut03.ut302CalculadoraAvanzada.SEGUNDONUMERO;
+
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.widget.TextView;
 import com.example.pmdm_2324.R;
@@ -11,14 +17,19 @@ public class ut302CalculadoraResultado extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ut302_calculadora_resultado);
-        resultadoCalculadora = findViewById(R.id.u302tvSalidaCalculadora);
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            setContentView(R.layout.activity_ut302_calculadora_resultadohorizontal);
+            resultadoCalculadora = findViewById(R.id.u302tvSalidaCalculadoraHorizontal);
+        } else {
+            setContentView(R.layout.activity_ut302_calculadora_resultado);
+            resultadoCalculadora = findViewById(R.id.u302tvSalidaCalculadora);
+        }
 
-        String primerNumero = getIntent().getStringExtra("PRIMERNUMERO");
-        String segundoNumero = getIntent().getStringExtra("SEGUNDONUMERO");
+        String primerNumero = getIntent().getStringExtra(PRIMERNUMERO);
+        String segundoNumero = getIntent().getStringExtra(SEGUNDONUMERO);
+        String operacion = getIntent().getStringExtra(OPERACION);
         double resultado = 0;
-        String operacion = getIntent().getStringExtra("OPERACION");
-        String cadena="";
+        String cadena = "";
 
         if (operacion.equals("sumar")) {
             resultado = sumar(primerNumero, segundoNumero);
@@ -30,16 +41,11 @@ public class ut302CalculadoraResultado extends AppCompatActivity {
             resultado = multiplicar(primerNumero, segundoNumero);
             cadena = String.valueOf(resultado);
         } else if (operacion.equals("dividir")) {
-            if(primerNumero.equals("1") & segundoNumero.equals("0")){
-                cadena="Syntax Error";
-            }else{
-                resultado = dividir(primerNumero, segundoNumero);
-                cadena = String.valueOf(resultado);
-            }
+            resultado = dividir(primerNumero, segundoNumero);
+            cadena = String.valueOf(resultado);
         }
         resultadoCalculadora.setText(cadena);
     }
-
     public double sumar(String uno, String dos) {
         double numero1 = Double.parseDouble(uno);
         double numero2 = Double.parseDouble(dos);
@@ -62,10 +68,6 @@ public class ut302CalculadoraResultado extends AppCompatActivity {
         final double divisionNula = 0.0;
         double numero1 = Double.parseDouble(uno);
         double numero2 = Double.parseDouble(dos);
-
-        if (numero1==1 && numero2 == 0) {
-            return divisionNula;
-        }
         return numero1 / numero2;
     }
 }
