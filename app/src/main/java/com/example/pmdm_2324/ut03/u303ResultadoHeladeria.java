@@ -8,65 +8,67 @@
 
     import android.graphics.Color;
     import android.os.Bundle;
-    import android.text.SpannableString;
-    import android.text.SpannableStringBuilder;
-    import android.text.style.ForegroundColorSpan;
-    import android.util.Log;
     import android.widget.TextView;
 
     import com.example.pmdm_2324.R;
 
     public class u303ResultadoHeladeria extends AppCompatActivity {
-
-        TextView resumen;
+    static final int NULO=0;
+    static boolean vacio=false;
+        TextView fresaResumen,vainillaResumen,chocoResumen,tipoResumen;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_u303_resultado_heladeria);
-            resumen = findViewById(R.id.u303ResultadoHelado);
+            fresaResumen=findViewById(R.id.u303tvFresaResumen);
+            chocoResumen=findViewById(R.id.u303tvChocolateResumen);
+            vainillaResumen=findViewById(R.id.u303tvVainillaResumen);
+            tipoResumen=findViewById(R.id.u303tvTipoResumen);
             String vainilla = getIntent().getStringExtra(VAINILLA);
             String chocolate = getIntent().getStringExtra(CHOCOLATE);
             String fresa = getIntent().getStringExtra(FRESA);
             String tipo = getIntent().getStringExtra(TIPOTARRINA);
+            int bolasVainilla=0;
+            int bolasFresa=0;
+            int bolasChoco=0;
+            if (vainilla != null) {
+                bolasVainilla = Integer.parseInt(vainilla);
+            }
 
-            // Procesar y mostrar los sabores
-            procesarSabor(vainilla, tipo, Color.YELLOW);
-            procesarSabor(chocolate, tipo, Color.rgb(128, 64, 0));
-            procesarSabor(fresa, tipo, Color.rgb(252, 90, 141));
-        }
+            if (chocolate != null) {
+                 bolasChoco = Integer.parseInt(chocolate);
+            }
 
-        public void procesarSabor(String sabor, String tipo, int color) {
-            if (sabor != null) {
-                int cantidad = Integer.parseInt(sabor);
-                if (cantidad > 0) {
-                    SpannableStringBuilder builder = new SpannableStringBuilder();
-                    String saborString = queTipoSoy(tipo);
-                    for (int i = 1; i <= cantidad; i++) {
-                        builder.append(saborDelColor(saborString, color, tipo));
-                    }
-                    resumen.append(builder);
+            if (fresa != null) {
+                 bolasFresa = Integer.parseInt(fresa);
+            }
+
+            if(bolasVainilla >= NULO){
+                for(int i=1;i<=bolasVainilla;i++){
+                    vainillaResumen.setTextColor(Color.YELLOW);
+                    vainillaResumen.append("( )");
                 }
             }
-        }
-
-        public String queTipoSoy(String tipo) {
-            String cadena = "";
-            if (tipo.equals("Cucurucho")) {
-                return cadena = "\nV\n";
-            } else if (tipo.equals("Cucurucho_de_chocolate")) {
-                return cadena = "\nV\n";
-            } else if (tipo.equals("Tarrina")) {
-                return cadena = "\nU\n";
+            if(bolasFresa>=NULO){
+                for(int i=1;i<=bolasFresa;i++){
+                    fresaResumen.setTextColor(Color.rgb(255,182,193));
+                    fresaResumen.append("( )");
+                }
             }
-            return "";
+            if(bolasChoco>=NULO){
+                for(int i=1;i<=bolasChoco;i++){
+                    chocoResumen.setTextColor(Color.rgb(128,60,0));
+                    chocoResumen.append("( )");
+                }
+            }
+            if(tipo.equals("Cucurucho")){
+                tipoResumen.setText("\\/");
+            }else if(tipo.equals("Cucurucho_de_chocolate")){
+                tipoResumen.setTextColor(Color.rgb(128,60,0));
+                tipoResumen.append("\\/");
+            }else if(tipo.equals("Tarrina")){
+                tipoResumen.setText("U");
+            }
         }
-
-        public SpannableString saborDelColor(String sabor, int color, String tipo) {
-            SpannableString spannableString = new SpannableString("() " + sabor);
-            ForegroundColorSpan colorSpan = new ForegroundColorSpan(color);
-            spannableString.setSpan(colorSpan, 0, 3, SpannableString.SPAN_EXCLUSIVE_EXCLUSIVE);
-            return spannableString;
-        }
-
     }
