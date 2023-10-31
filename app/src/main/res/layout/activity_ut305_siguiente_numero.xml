@@ -10,7 +10,7 @@
         android:id="@+id/ut305btCalcularFibo"
         android:layout_width="265dp"
         android:layout_height="151dp"
-        android:text="Calcular"
+        android:text="OK"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,9 +18,11 @@
         app:layout_constraintVertical_bias="0.415" />
 
     <TextView
-        android:id="@+id/prueba"
+        android:id="@+id/ut305tvResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/ut305btCalcularFibo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
