@@ -34,8 +34,8 @@ public class ut305MainFibonacci extends AppCompatActivity {
         Intent i=new Intent(this,ut305SiguienteNumero.class);
         String numero1=ut305TvN1.getText().toString();
         String numero2=ut305TvN2.getText().toString();
-        i.putExtra("NUMERO1",numero1);
-        i.putExtra("NUMERO2",numero2);
+        i.putExtra(NUMERO1,numero1);
+        i.putExtra(NUMERO2,numero2);
         launcher.launch(i);
 
         });
