@@ -37,7 +37,10 @@
             android:name=".ut03.ut307SelectorArmas"
             android:exported="false" />
         <activity
-            android:name=".ut03.ut307SelectorPersonajes"
+            android:name=".ut03.ut307SelectorPersonajesJugador1"
+            android:exported="false" />
+        <activity
+            android:name=".ut03.ut307SelectorPersonajesJugador2"
             android:exported="false" />
         <activity
             android:name=".ut03.ut307MetalSlugMain"
