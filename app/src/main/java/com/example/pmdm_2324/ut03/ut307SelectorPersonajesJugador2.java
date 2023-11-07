@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.pmdm_2324.R;
 
 public class ut307SelectorPersonajesJugador2 extends AppCompatActivity {
+    static final String PERSONAJE2 ="PERSONAJE2";
     ImageButton ut307ImgPersonaje1, ut307ImgPersonaje2, ut307ImgPersonaje3;
     Button ut307btCancelar, ut307btLimpiar;
 
@@ -23,32 +24,32 @@ public class ut307SelectorPersonajesJugador2 extends AppCompatActivity {
         ut307btLimpiar = findViewById(R.id.ut307btLimpiar);
 
         Intent data = new Intent();
-        int personajeSeleccionadoP1 = getIntent().getIntExtra("PERSONAJESELECCIONADO", -1);
+        int personajeSeleccionadoP2 = getIntent().getIntExtra("PERSONAJESELECCIONADO", -1);
 
-        if (personajeSeleccionadoP1 != -1) {
-            if (personajeSeleccionadoP1 == R.drawable.metalslugpersonaje1) {
+        if (personajeSeleccionadoP2 != -1) {
+            if (personajeSeleccionadoP2 == R.drawable.metalslugpersonaje1) {
                 ut307ImgPersonaje1.setVisibility(View.INVISIBLE);
-            } else if (personajeSeleccionadoP1 == R.drawable.metalslugpersonaje2) {
+            } else if (personajeSeleccionadoP2 == R.drawable.metalslugpersonaje2) {
                 ut307ImgPersonaje2.setVisibility(View.INVISIBLE);
-            } else if (personajeSeleccionadoP1 == R.drawable.metalslugpersonaje3) {
+            } else if (personajeSeleccionadoP2 == R.drawable.metalslugpersonaje3) {
                 ut307ImgPersonaje3.setVisibility(View.INVISIBLE);
             }
         }
 
         ut307ImgPersonaje1.setOnClickListener(View -> {
-            data.putExtra("PERSONAJE", R.drawable.metalslugpersonaje1);
+            data.putExtra(PERSONAJE2, R.drawable.metalslugpersonaje1);
             setResult(RESULT_OK, data);
             finish();
         });
 
         ut307ImgPersonaje2.setOnClickListener(View -> {
-            data.putExtra("PERSONAJE", R.drawable.metalslugpersonaje2);
+            data.putExtra(PERSONAJE2, R.drawable.metalslugpersonaje2);
             setResult(RESULT_OK, data);
             finish();
         });
 
         ut307ImgPersonaje3.setOnClickListener(View -> {
-            data.putExtra("PERSONAJE", R.drawable.metalslugpersonaje3);
+            data.putExtra(PERSONAJE2, R.drawable.metalslugpersonaje3);
             setResult(RESULT_OK, data);
             finish();
         });

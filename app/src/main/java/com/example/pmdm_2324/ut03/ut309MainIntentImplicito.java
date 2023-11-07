@@ -46,10 +46,9 @@ public class ut309MainIntentImplicito extends AppCompatActivity {
 
         ut309btEleccion.setOnClickListener(view -> {
                 Uri gmmIntentUri = Uri.parse("geo:0,0?q=" + Uri.encode("IES Juan de la Cierva, Calle de la Caoba, Madrid"));
-                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-                mapIntent.setPackage("com.google.android.apps.maps");
-                startActivity(mapIntent);
+                Intent mapa = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                mapa.setPackage("com.google.android.apps.maps");
+                startActivity(mapa);
         });
-
     }
 }

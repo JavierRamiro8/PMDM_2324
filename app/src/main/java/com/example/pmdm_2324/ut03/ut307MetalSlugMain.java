@@ -1,5 +1,9 @@
 package com.example.pmdm_2324.ut03;
 
+import static com.example.pmdm_2324.ut03.ut307SelectorArmas.ARMA;
+import static com.example.pmdm_2324.ut03.ut307SelectorPersonajesJugador1.PERSONAJE1;
+import static com.example.pmdm_2324.ut03.ut307SelectorPersonajesJugador2.PERSONAJE2;
+
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
@@ -53,7 +57,7 @@ public class ut307MetalSlugMain extends AppCompatActivity {
                 public void onActivityResult(ActivityResult result) {
                     Intent data = result.getData();
                     if (result.getResultCode() == Activity.RESULT_OK) {
-                        int imagenEscogida = data.getIntExtra("PERSONAJE", 0);
+                        int imagenEscogida = data.getIntExtra(PERSONAJE1, 0);
                         ut307ImgPersonajeOcultoP1.setImageResource(imagenEscogida);
                         personajeSeleccionadoP1 = imagenEscogida;
                     } else if (result.getResultCode() == Activity.RESULT_FIRST_USER) {
@@ -71,7 +75,7 @@ public class ut307MetalSlugMain extends AppCompatActivity {
                 public void onActivityResult(ActivityResult result) {
                     Intent data = result.getData();
                     if (result.getResultCode() == Activity.RESULT_OK) {
-                        int imagenEscogida = data.getIntExtra("PERSONAJE", 0);
+                        int imagenEscogida = data.getIntExtra(PERSONAJE2, 0);
                         ut307ImgPersonajeOcultoP2.setImageResource(imagenEscogida);
                         personajeSeleccionadoP2 = imagenEscogida;
                     } else if (result.getResultCode() == Activity.RESULT_FIRST_USER) {
@@ -88,8 +92,9 @@ public class ut307MetalSlugMain extends AppCompatActivity {
                 @Override
                 public void onActivityResult(ActivityResult result) {
                     Intent data = result.getData();
+                    int imagenEscogida=0;
                     if (result.getResultCode() == Activity.RESULT_OK) {
-                        int imagenEscogida = data.getIntExtra("ARMA", 0);
+                        imagenEscogida = data.getIntExtra(ARMA, 0);
                         ut307ImgArmaOcultaP1.setImageResource(imagenEscogida);
                     } else if (result.getResultCode() == Activity.RESULT_FIRST_USER) {
                         ut307ImgArmaOcultaP1.setImageResource(R.drawable.siluetapistola);
@@ -104,8 +109,9 @@ public class ut307MetalSlugMain extends AppCompatActivity {
                 @Override
                 public void onActivityResult(ActivityResult result) {
                     Intent data = result.getData();
+                     int imagenEscogida=0;
                     if (result.getResultCode() == Activity.RESULT_OK) {
-                        int imagenEscogida = data.getIntExtra("ARMA", 0);
+                        imagenEscogida = data.getIntExtra(ARMA, 0);
                         ut307ImgArmaOcultaP2.setImageResource(imagenEscogida);
                     } else if (result.getResultCode() == Activity.RESULT_FIRST_USER) {
                         ut307ImgArmaOcultaP2.setImageResource(R.drawable.siluetapistola);

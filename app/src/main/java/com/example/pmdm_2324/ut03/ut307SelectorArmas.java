@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 import com.example.pmdm_2324.R;
 
 public class ut307SelectorArmas extends AppCompatActivity {
-
+    static final String ARMA ="ARMA";
     ImageButton ut307ImgArma1,ut307ImgArma2,ut307ImgArma3;
     Button ut307ImgArmaCancelar,ut307ImgArmaLimpiar;
     @Override
@@ -22,19 +22,20 @@ public class ut307SelectorArmas extends AppCompatActivity {
         ut307ImgArma3=findViewById(R.id.ut307ImgArma3);
         ut307ImgArmaCancelar=findViewById(R.id.ut307ImgArmaCancelar);
         ut307ImgArmaLimpiar=findViewById(R.id.ut307ImgArmaLimpiar);
+
         Intent data= new Intent();
         ut307ImgArma1.setOnClickListener(View ->{
-            data.putExtra("ARMA1",R.drawable.pistola4);
+            data.putExtra(ARMA,R.drawable.pistola4);
             setResult(RESULT_OK,data);
             finish();
         });
         ut307ImgArma2.setOnClickListener(View ->{
-            data.putExtra("ARMA2",R.drawable.fusil);
+            data.putExtra(ARMA,R.drawable.fusil);
             setResult(RESULT_OK,data);
             finish();
         });
         ut307ImgArma3.setOnClickListener(View ->{
-            data.putExtra("ARMA3",R.drawable.escopeta);
+            data.putExtra(ARMA,R.drawable.escopeta);
             setResult(RESULT_OK,data);
             finish();
         });
