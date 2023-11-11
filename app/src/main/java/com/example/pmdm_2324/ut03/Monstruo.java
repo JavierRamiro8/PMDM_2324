@@ -1,51 +1,67 @@
-    package com.example.pmdm_2324.ut03;
+package com.example.pmdm_2324.ut03;
 
-    import java.io.Serializable;
-    import java.util.Random;
+import java.io.Serializable;
+import java.util.Random;
 
-    public class Monstruo implements Serializable {
-        private String nombre;
-        private int numeroExtremidades;
-        private String color;
+public class Monstruo implements Serializable {
+    private String nombre;
+    private int extremidades;
+    private int brazoIzquierdo;
+    private int brazoDerecho;
+    private int piernaIzquierda;
+    private int piernaDerecha;
+    private String color;
 
-        public Monstruo(String nombre, int numeroExtremidades, String color) {
-            this.nombre = nombre;
-            this.numeroExtremidades = numeroExtremidades;
-            this.color = color;
-        }
+    public Monstruo(String nombre, int extremidades, String color) {
+        this.nombre = nombre;
+        this.color = color;
+        this.extremidades=extremidades;
 
-        private String generarPiernasYManos() {
-            String monstruo = "";
+        // Generar aleatoriamente la cantidad de brazos izquierdos
+        Random random = new Random();
+        this.brazoIzquierdo = random.nextInt(extremidades); // Entre 0 y extremidades
 
-            Random random = new Random();
+        // Generar aleatoriamente la cantidad de brazos derechos
+        this.brazoDerecho = extremidades - brazoIzquierdo;
 
-            for (int i = 0; i < numeroExtremidades; i++) {
-                monstruo += "  *\n";
+        // Generar aleatoriamente la cantidad de piernas izquierdas
+        this.piernaIzquierda = random.nextInt(extremidades); // Entre 0 y extremidades
 
-                int manos = random.nextInt(Math.max(numeroExtremidades, 1)) - 1 + 1;
-                int piernas = numeroExtremidades - manos;
-
-                if (piernas <= 0) {
-                    manos = numeroExtremidades;
-                    piernas = 1;
-                }
-
-                for (int j = 0; j < manos; j++) {
-                    monstruo += "/ ";
-                }
-                monstruo += "\n";
-                for (int j = 0; j < piernas; j++) {
-                    monstruo += "\\ ";
-                }
-                monstruo += "\n";
-            }
-
-            return monstruo;
-        }
-
-
-        @Override
-        public String toString() {
-            return generarPiernasYManos();
-        }
+        // Generar aleatoriamente la cantidad de piernas derechas
+        this.piernaDerecha = extremidades - piernaIzquierda;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder monstruoAscii = new StringBuilder();
+
+        monstruoAscii.append("El monstruo llamado ").append(nombre).append(" tiene ").append(extremidades).append(" miembros\n");
+
+        int maxBrazos = Math.max(brazoIzquierdo, brazoDerecho);
+        int maxPiernas = Math.max(piernaIzquierda, piernaDerecha);
+        monstruoAscii.append("  *\n");
+        // Dibujar el monstruo con los brazos izquierdos y derechos
+        for (int i = 0; i < maxBrazos; i++) {
+            if (i < brazoIzquierdo) {
+            } else {
+                monstruoAscii.append("/o");
+            }
+            if (i < brazoDerecho) {
+                monstruoAscii.append("\\");
+            }
+        }
+        monstruoAscii.append("\n");
+        for (int i = 0; i < maxPiernas; i++) {
+            if (i < piernaIzquierda) {
+                monstruoAscii.append("/");
+            }
+            if (i < piernaDerecha) {
+                monstruoAscii.append("\\");
+            }
+        }
+
+        return monstruoAscii.toString();
+    }
+}
+
+
