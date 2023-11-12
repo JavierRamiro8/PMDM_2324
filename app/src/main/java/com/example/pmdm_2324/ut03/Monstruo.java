@@ -43,7 +43,6 @@ public class Monstruo implements Serializable {
         // Dibujar el monstruo con los brazos izquierdos y derechos
         for (int i = 0; i < maxBrazos; i++) {
             if (i < brazoIzquierdo) {
-            } else {
                 monstruoAscii.append("/o");
             }
             if (i < brazoDerecho) {
