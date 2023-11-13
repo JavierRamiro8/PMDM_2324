@@ -25,7 +25,7 @@ public class Monstruo implements Serializable {
         this.brazoDerecho = extremidades - brazoIzquierdo;
 
         // Generar aleatoriamente la cantidad de piernas izquierdas
-        this.piernaIzquierda = random.nextInt(extremidades); // Entre 0 y extremidades
+        this.piernaIzquierda = random.nextInt(extremidades);
 
         // Generar aleatoriamente la cantidad de piernas derechas
         this.piernaDerecha = extremidades - piernaIzquierda;
