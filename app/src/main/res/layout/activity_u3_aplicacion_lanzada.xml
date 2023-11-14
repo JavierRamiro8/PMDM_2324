@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ut03.u3AplicacionLanzada">
+    tools:context=".ut03_PasosDeDatosEntreActividades.u3AplicacionLanzada">
 
     <TextView
         android:id="@+id/ut3TvSalidaPrueba"

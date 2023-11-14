@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#AFAAAA"
     android:orientation="horizontal"
-    tools:context=".ut03.ut302CalculadoraAvanzada">
+    tools:context=".ut03_PasosDeDatosEntreActividades.ut302CalculadoraAvanzada">
 
     <RadioGroup
         android:id="@+id/u302rgOperacion"

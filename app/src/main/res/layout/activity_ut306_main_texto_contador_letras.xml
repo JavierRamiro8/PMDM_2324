@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ut03.ut306MainTextoContadorLetras">
+    tools:context=".ut03_PasosDeDatosEntreActividades.ut306MainTextoContadorLetras">
 
     <EditText
         android:id="@+id/ut306IntroducirTexto"
