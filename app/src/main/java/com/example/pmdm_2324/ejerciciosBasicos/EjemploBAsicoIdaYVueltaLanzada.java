@@ -18,7 +18,7 @@ public class EjemploBAsicoIdaYVueltaLanzada extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ejemplo_basico_ida_yvuelta_lanzada);
+        setContentView(R.layout.activity_ut3prueba_basico_ida_yvuelta_lanzada);
         btEnviarNumero=findViewById(R.id.btPracticaEnviarNumero);
         btCancelar=findViewById(R.id.btPracticaCancelarNumero);
         etNumero=findViewById(R.id.etPracticaIntroducirNumero);

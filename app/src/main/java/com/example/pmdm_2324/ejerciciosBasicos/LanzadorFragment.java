@@ -11,6 +11,6 @@ public class LanzadorFragment extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lanzador_fragment);
+        setContentView(R.layout.activity_ut4prueba_lanzador_fragment);
     }
 }

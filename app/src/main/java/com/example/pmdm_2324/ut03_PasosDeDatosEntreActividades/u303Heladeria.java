@@ -28,7 +28,7 @@ public class u303Heladeria extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_u303_heladeria);
+        setContentView(R.layout.activity_ut303_heladeria);
         numVainilla= findViewById(R.id.ut303numVainilla);
         numFresa= findViewById(R.id.ut303numFresa);
         numChocolate= findViewById(R.id.ut303numChocolate);

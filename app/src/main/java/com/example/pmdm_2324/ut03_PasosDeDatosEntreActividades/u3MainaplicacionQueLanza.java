@@ -16,7 +16,7 @@ EditText u3PruebaLanzableeditText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_u3_mainaplicacion_que_lanza);
+        setContentView(R.layout.activity_ut3_mainaplicacion_que_lanza);
         ut3PruebaLanzar=findViewById(R.id.ut3PruebaLanzar);
         editTextPrueba=findViewById(R.id.u3PruebaLanzableeditText);
         u3PruebaLanzableeditText=findViewById(R.id.u3PruebaLanzableeditText);

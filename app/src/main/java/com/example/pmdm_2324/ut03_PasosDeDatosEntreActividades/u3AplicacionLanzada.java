@@ -12,7 +12,7 @@ public class u3AplicacionLanzada extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_u3_aplicacion_lanzada);
+        setContentView(R.layout.activity_ut3_aplicacion_lanzada);
 
         Bundle info=getIntent().getExtras();
         //String sInfo=info.getString(u3MainaplicacionQueLanza.INFO_NOMBRE);

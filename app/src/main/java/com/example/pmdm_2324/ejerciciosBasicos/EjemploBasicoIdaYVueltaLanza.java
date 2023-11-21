@@ -7,7 +7,6 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
-import android.app.Instrumentation;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -16,8 +15,6 @@ import android.widget.TextView;
 
 import com.example.pmdm_2324.R;
 
-import javax.xml.transform.Result;
-
 public class EjemploBasicoIdaYVueltaLanza extends AppCompatActivity {
 Button botonObtenerNumero;
 TextView tvNumero;
@@ -25,7 +22,7 @@ TextView tvCancelado;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ejemplo_basico_ida_yvuelta_lanza);
+        setContentView(R.layout.activity_ut3prueba_basico_ida_yvuelta_lanza);
         botonObtenerNumero=findViewById(R.id.btPracticaObtenerNumero);
         tvNumero=findViewById(R.id.tvPracticaNumero);
         tvCancelado=findViewById(R.id.tvPracticaSalidaCancelada);

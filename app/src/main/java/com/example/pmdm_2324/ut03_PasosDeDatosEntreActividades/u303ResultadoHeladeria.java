@@ -20,7 +20,7 @@
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_u303_resultado_heladeria);
+            setContentView(R.layout.activity_ut303_resultado_heladeria);
             fresaResumen=findViewById(R.id.u303tvFresaResumen);
             chocoResumen=findViewById(R.id.u303tvChocolateResumen);
             vainillaResumen=findViewById(R.id.u303tvVainillaResumen);
