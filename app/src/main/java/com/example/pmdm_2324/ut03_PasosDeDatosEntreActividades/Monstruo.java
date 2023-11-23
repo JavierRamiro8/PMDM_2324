@@ -46,4 +46,7 @@ public class Monstruo implements Serializable {
         }
         return imprimirMonstruo.toString();
     }
+    public String getColor(){
+        return color;
+    }
 }
