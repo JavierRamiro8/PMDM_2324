@@ -3,6 +3,7 @@ package com.example.pmdm_2324.ut04_Fragments;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,6 +16,8 @@ public class ut402MainMonstruoConFragments extends AppCompatActivity {
     Button enviar;
     ut402FragmentMonstruos fragment1, fragment2, fragment3, fragment4;
 
+    Spinner spinnerMonstruo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,12 +27,11 @@ public class ut402MainMonstruoConFragments extends AppCompatActivity {
         extremidadesMonstruo = findViewById(R.id.ut402IdEtExtremidades);
         colorMonstruo = findViewById(R.id.ut402IdEtColor);
         enviar = findViewById(R.id.ut402idBtenviar);
-
-        // Inicializa los contenedores de fragmentos
-        fragment1 = ut402FragmentMonstruos.newInstance("", "");
-        fragment2 = ut402FragmentMonstruos.newInstance("", "");
-        fragment3 = ut402FragmentMonstruos.newInstance("", "");
-        fragment4 = ut402FragmentMonstruos.newInstance("", "");
+        spinnerMonstruo = findViewById(R.id.ut402idSpinner);
+        fragment1 = (ut402FragmentMonstruos) getSupportFragmentManager().findFragmentById(R.id.ut402idfg1);
+        fragment2 = (ut402FragmentMonstruos) getSupportFragmentManager().findFragmentById(R.id.ut402idfg2);
+        fragment3 = (ut402FragmentMonstruos) getSupportFragmentManager().findFragmentById(R.id.ut402idfg3);
+        fragment4 = (ut402FragmentMonstruos) getSupportFragmentManager().findFragmentById(R.id.ut402idfg4);
 
         enviar.setOnClickListener(view -> {
             String nombre = nombreMonstruo.getText().toString();
@@ -45,19 +47,15 @@ public class ut402MainMonstruoConFragments extends AppCompatActivity {
 
             if (!nombre.isEmpty() && !color.isEmpty() && extremidades > 0) {
                 MonstruoParaFragments monstruoEnviado = new MonstruoParaFragments(nombre, extremidades, color);
-
-                // Pasa los monstruos directamente a los fragmentos
-                fragment1.actualizarMonstruo(monstruoEnviado);
-                fragment2.actualizarMonstruo(monstruoEnviado);
-                fragment3.actualizarMonstruo(monstruoEnviado);
-                fragment4.actualizarMonstruo(monstruoEnviado);
-
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.ut402idfg1, fragment1)
-                        .replace(R.id.ut402idfg2, fragment2)
-                        .replace(R.id.ut402idfg3, fragment3)
-                        .replace(R.id.ut402idfg4, fragment4)
-                        .commit();
+                if (spinnerMonstruo.getSelectedItem().equals("Monstruo1")) {
+                    fragment1.actualizarMonstruo(monstruoEnviado);
+                } else if (spinnerMonstruo.getSelectedItem().equals("Monstruo2")) {
+                    fragment2.actualizarMonstruo(monstruoEnviado);
+                } else if (spinnerMonstruo.getSelectedItem().equals("Monstruo3")) {
+                    fragment3.actualizarMonstruo(monstruoEnviado);
+                } else if (spinnerMonstruo.getSelectedItem().equals("Monstruo4")) {
+                    fragment4.actualizarMonstruo(monstruoEnviado);
+                }
             } else {
                 if (nombre.isEmpty()) {
                     nombreMonstruo.setError("Introduce un Nombre");

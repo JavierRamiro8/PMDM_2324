@@ -55,8 +55,8 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="173dp"
-        android:layout_height="26dp"
+        android:layout_width="169dp"
+        android:layout_height="27dp"
         android:layout_marginTop="120dp"
         android:text="numero de extremidades"
         app:layout_constraintEnd_toEndOf="parent"
@@ -136,5 +136,16 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.379" />
+        app:layout_constraintVertical_bias="0.395" />
+
+    <Spinner
+        android:id="@+id/ut402idSpinner"
+        android:layout_width="343dp"
+        android:layout_height="25dp"
+        android:entries="@array/ut402MonstruoSpinner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.332" />
 </androidx.constraintlayout.widget.ConstraintLayout>

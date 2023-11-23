@@ -1,7 +1,5 @@
 package com.example.pmdm_2324.ut03_PasosDeDatosEntreActividades;
 
-import static com.example.pmdm_2324.ut04_Fragments.ut402FragmentMonstruos.MONSTRUOFRAGMENT;
-
 import android.os.Bundle;
 
 import java.io.Serializable;
@@ -53,13 +51,6 @@ public class MonstruoParaFragments implements Serializable {
 
     public String getColor() {
         return color;
-    }
-
-    public static MonstruoParaFragments fromBundle(Bundle bundle) {
-        if (bundle == null) {
-            return null;
-        }
-        return (MonstruoParaFragments) bundle.getSerializable(MONSTRUOFRAGMENT);
     }
 }
 

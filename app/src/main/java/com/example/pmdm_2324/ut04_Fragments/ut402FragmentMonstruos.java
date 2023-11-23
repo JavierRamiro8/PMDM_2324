@@ -63,27 +63,11 @@ public class ut402FragmentMonstruos extends Fragment {
     }
 
     TextView mostrarMonstruo;
-    public static final String MONSTRUOFRAGMENT = "MONSTRUO";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View layout = inflater.inflate(R.layout.fragment_ut402_monstruos, container, false);
-
-        // Obtener la referencia al TextView
         mostrarMonstruo = layout.findViewById(R.id.ut402idfrMostrarMonstruo);
-
-        // Obtener el monstruo del bundle
-        mostrarMonstruo.setOnClickListener(view -> {
-            Bundle args = getArguments();
-            if (args != null && args.containsKey(MONSTRUOFRAGMENT)) {
-                Monstruo monstruoRecibido = (Monstruo) args.getSerializable(MONSTRUOFRAGMENT);
-                mostrarMonstruo.setTextColor(Color.parseColor(monstruoRecibido.getColor()));
-                mostrarMonstruo.append(monstruoRecibido.toString());
-            } else {
-                mostrarMonstruo.setText("No se recibió un monstruo válido");
-            }
-        });
         return layout;
     }
 
