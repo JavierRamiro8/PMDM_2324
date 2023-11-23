@@ -66,7 +66,7 @@ public class MiPrimerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View layout = inflater.inflate(R.layout.fragment_ut40prueba, container, false);
+        View layout = inflater.inflate(R.layout.fragment_ut4prueba, container, false);
         tvHola = layout.findViewById(R.id.ut04f1idtvHola);
 
         tvHola.setOnClickListener((v) -> {
