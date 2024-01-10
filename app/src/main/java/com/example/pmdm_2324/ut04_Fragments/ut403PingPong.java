@@ -68,27 +68,9 @@ public class ut403PingPong extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View layout = inflater.inflate(R.layout.fragment_ut403_ping_pong, container, false);
-        jugador1 = layout.findViewById(R.id.ut403idTvJugador1);
-        jugador2 = layout.findViewById(R.id.ut403idTvJugador2);
-        jugar = layout.findViewById(R.id.ut403idBtJugamos);
-        AtomicInteger contadorJugador1 = new AtomicInteger();
-        AtomicInteger contadorJugador2 = new AtomicInteger();
-        int jugadaGanada = (int) Math.random() * 2;
-
-        jugar.setOnClickListener(v -> {
-            switch (jugadaGanada) {
-                case 0:
-                    break;
-                case 1:
-                    contadorJugador1.getAndIncrement();
-                    jugador1.setText("Jugador 1 /n" + contadorJugador1);
-                    break;
-                case 2:
-                    contadorJugador2.getAndIncrement();
-                    jugador2.setText("Jugador 2 /n"+contadorJugador2);
-                    break;
-            }
-        });
+        jugador1=layout.findViewById(R.id.ut403idTvPuntuacionJ1);
+        jugador2=layout.findViewById(R.id.ut403idTvPuntuacionJ2);
+        jugar=layout.findViewById(R.id.ut403idBtJugamos);
         return layout;
     }
 }

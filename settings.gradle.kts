@@ -15,3 +15,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "PMDM_2324"
 include(":app")
+include(":app")
+ 
