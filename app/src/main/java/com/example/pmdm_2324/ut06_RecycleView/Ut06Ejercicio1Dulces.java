@@ -19,11 +19,6 @@ public class Ut06Ejercicio1Dulces {
             dulce.nombreDulce=arrayNombreDulce.get(i);
             dulce.frutoSeco=arrayFrutoSeco.get(i);
             dulce.calorias=arrayCalorias.get(i);
-            if (dulce.frutoSeco.equals("Si")){
-                dulce.dulceNavidenio=String.format("%s %s tiene frutos secos y tiene %d calorias",dulce.nombreDulce,dulce.frutoSeco,dulce.calorias);
-            }else{
-                dulce.dulceNavidenio=String.format("%s %s tiene frutos secos y tiene %d calorias",dulce.nombreDulce,dulce.frutoSeco,dulce.calorias);
-            }
         return dulce;
     }
     public static Ut06Ejercicio1Dulces[] generarDulcesNavidenios() {
