@@ -5,7 +5,7 @@
     android:id="@+id/ut201Layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ut01y02.ut201_Colores">
+    tools:context=".ut03_PasosDeDatosEntreActividades.ut01y02.ut201_Colores">
 
     <TextView
         android:id="@+id/ut201B"

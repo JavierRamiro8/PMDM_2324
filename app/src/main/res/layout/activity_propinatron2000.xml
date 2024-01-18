@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ut01y02.Propinatron2000">
+    tools:context=".ut03_PasosDeDatosEntreActividades.ut01y02.Propinatron2000">
 
     <Button
         android:id="@+id/ut203bt6"

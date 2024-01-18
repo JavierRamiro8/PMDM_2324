@@ -7,14 +7,17 @@
         android:required="false" />
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launcher_foreground"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/ic_launcher_background"
         android:supportsRtl="true"
         android:theme="@style/Theme.PMDM_2324"
         tools:targetApi="31">
@@ -38,15 +41,6 @@
         </activity>
         <activity
             android:name=".ut05.EjemploPermisosAvanzados"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.example.ejerciciosrepaso.ejercicioCalculadora"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -231,7 +225,7 @@
             android:name=".ut03_PasosDeDatosEntreActividades.u3AplicacionLanzada"
             android:exported="false" />
         <activity
-            android:name=".ut01y02.PiedraPapelTijera"
+            android:name=".ut03_PasosDeDatosEntreActividades.ut01y02.PiedraPapelTijera"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -240,7 +234,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ut01y02.ut02_ej05_pedirCita"
+            android:name=".ut03_PasosDeDatosEntreActividades.ut01y02.ut02_ej05_pedirCita"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -249,7 +243,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ut01y02.Propinatron2000"
+            android:name=".ut03_PasosDeDatosEntreActividades.ut01y02.Propinatron2000"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -258,7 +252,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ut01y02.ut201_Colores"
+            android:name=".ut03_PasosDeDatosEntreActividades.ut01y02.ut201_Colores"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -267,7 +261,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ut01y02.ut2_ej01_CajaRadioCheckTextoBoton"
+            android:name=".ut03_PasosDeDatosEntreActividades.ut01y02.ut2_ej01_CajaRadioCheckTextoBoton"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

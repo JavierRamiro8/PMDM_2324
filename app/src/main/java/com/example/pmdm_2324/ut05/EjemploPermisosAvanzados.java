@@ -31,7 +31,7 @@ public class EjemploPermisosAvanzados extends AppCompatActivity {
                 llamar();
             } else {
                 // Permiso denegado, mostrar mensaje al usuario
-                Toast.makeText(this, "Necesitamos permiso para llamar", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Necesitamos permiso para realizar la llamada", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -39,20 +39,21 @@ public class EjemploPermisosAvanzados extends AppCompatActivity {
         boton.setOnClickListener(v -> {
             // Verificar si ya se tiene el permiso
             if (ContextCompat.checkSelfPermission(
-                    this, Manifest.permission.CALL_PHONE) ==
+                    this, Manifest.permission.INTERNET) ==
                     PackageManager.PERMISSION_GRANTED) {
                 // Permiso concedido, realizar la acción
                 llamar();
             } else {
                 // Solicitar permiso al usuario
-                requestPermissionLauncher.launch(Manifest.permission.CALL_PHONE);
+                requestPermissionLauncher.launch(Manifest.permission.INTERNET);
             }
         });
     }
 
     private void llamar() {
-        Intent phoneIntent = new Intent(Intent.ACTION_CALL);
-        phoneIntent.setData(Uri.parse("tel:0034 666 66 66 66"));
+        Uri uri=Uri.parse("https://www.myprotein.es/?affil=mpppc&affil=mpppc_campaign=71700000079726222&adtype=&product_id=&gad_source=1&gclid=Cj0KCQiAtaOtBhCwARIsAN_x-3K4VHneWM3r6cflrr4yEsgz9fP02THEPqFG-lgtdreM370PDHHyMN8aAuCrEALw_wcB&gclsrc=aw.ds");
+        Intent phoneIntent = new Intent(Intent.ACTION_VIEW,uri);
         startActivity(phoneIntent);
     }
 }
+

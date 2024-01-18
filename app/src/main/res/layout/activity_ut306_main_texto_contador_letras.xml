@@ -35,6 +35,7 @@
         android:layout_width="203dp"
         android:layout_height="103dp"
         android:layout_marginTop="124dp"
+        android:background="#1EE991"
         android:text="Analizar"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"

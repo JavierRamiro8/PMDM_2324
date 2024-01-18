@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ut01y02.PiedraPapelTijera">
+    tools:context=".ut03_PasosDeDatosEntreActividades.ut01y02.PiedraPapelTijera">
 
     <TextView
         android:id="@+id/ut207LbResultado"
