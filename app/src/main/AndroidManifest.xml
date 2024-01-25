@@ -31,6 +31,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".ut08.ut08A1NumeroAleatorioPrimo"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".ut06_RecycleView.Ut06Lista"
             android:exported="true">
             <intent-filter>
