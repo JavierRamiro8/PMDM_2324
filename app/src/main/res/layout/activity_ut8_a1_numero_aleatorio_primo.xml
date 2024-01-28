@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ut08.ut08A1NumeroAleatorioPrimo">
+    tools:context=".ut08.ut8a1NumeroAleatorioPrimo">
 
     <Button
         android:id="@+id/ut8a1BtLogin"
