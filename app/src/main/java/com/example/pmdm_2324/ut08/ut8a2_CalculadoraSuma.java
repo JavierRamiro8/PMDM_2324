@@ -44,13 +44,7 @@ public class ut8a2_CalculadoraSuma extends AppCompatActivity {
             numero2Suma=Integer.parseInt(numero2.getText().toString());
             carga.setVisibility(View.VISIBLE);
             resultado.setVisibility(View.INVISIBLE);
-            vm.cargaNumero();
+            vm.cargaSuma(numero1Suma,numero2Suma);
         });
-    }
-    public static int getNumero1(){
-        return numero1Suma;
-    }
-    public static int getNumero2(){
-        return numero2Suma;
     }
 }
