@@ -34,7 +34,7 @@ public class ut8a3_ParesONones extends AppCompatActivity {
         ut8a3_ParesONonesViewModel vm = new ViewModelProvider(this).get(ut8a3_ParesONonesViewModel.class);
         vm.getResultadoNum().observe(this, integer -> {
             //Actualizas la interfaz en esta parte
-            tvResultadoPartida.setText("" + integer);
+            tvResultadoPartida.setText("" +integer);
             carga.setVisibility(View.INVISIBLE);
             tvResultadoPartida.setVisibility(View.VISIBLE);
         });
