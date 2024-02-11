@@ -1,4 +1,4 @@
-package com.example.pmdm_2324.ut9;
+package com.example.pmdm_2324.ut9.Prueba;
 
 public class Personaje {
     public int id;

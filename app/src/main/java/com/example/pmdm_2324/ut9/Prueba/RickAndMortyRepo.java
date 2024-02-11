@@ -1,4 +1,4 @@
-package com.example.pmdm_2324.ut9;
+package com.example.pmdm_2324.ut9.Prueba;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

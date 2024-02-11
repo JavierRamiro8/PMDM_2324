@@ -1,4 +1,4 @@
-package com.example.pmdm_2324.ut9;
+package com.example.pmdm_2324.ut9.Prueba;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
