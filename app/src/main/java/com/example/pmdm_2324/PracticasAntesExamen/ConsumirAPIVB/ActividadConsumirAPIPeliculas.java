@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.example.pmdm_2324.PracticasAntesExamen.ConsumirAPIVB.CallAPI.Actores;
 import com.example.pmdm_2324.PracticasAntesExamen.ConsumirAPIVB.CallAPI.Peliculas;
@@ -67,8 +68,11 @@ public class ActividadConsumirAPIPeliculas extends AppCompatActivity {
                         }
                         recyclePeliculas.setAdapter(adapter);
                         recyclePeliculas.setLayoutManager(new LinearLayoutManager(getBaseContext()));
-                        adapter.notifyDataSetChanged();
+                        adapter.add(listaPeliculas);
                         mvvm.cargaNumero();
+                        adapter.setOnItemClickListener(peliculas -> {
+                            generar.setText("HOLAAAAAAAAA");
+                        });
                     }
                 }
 
